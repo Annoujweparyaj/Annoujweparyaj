@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>FunBet – AnnouJweParyaj</title>
+<style>
+body { font-family: Arial, sans-serif;  background-color:#f5f5f5; padding-top :110px; ;}
+h1 { color: #007bff; }
+
+/* Header fixe similaire au site principal */
+.header-fixe {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background-color: rgb(51, 118, 83);
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 16px;
+    z-index: 9999;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-fixe img { height: 60px; margin-bottom: 5px; }
+.marquee { overflow: hidden; white-space: nowrap; width: 100%; }
+.marquee p { display: inline-block; padding-left:100%; animation:defile 15s linear infinite; font-size:14px; font-weight:bold; }
+@keyframes defile { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
+
+/* FunBet ticket */
+.ticket-combine { width: 95%; max-width: 700px; margin:120px auto 20px; padding: 15px; border:2px solid #333; border-radius:10px; background-color:#fff; }
+.funbet { margin:10px 0; padding:6px; border-bottom:1px solid #ccc; }
+.cotes button { margin-left:10px; cursor:pointer; padding:4px 8px; border:none; border-radius:5px; background-color:#007bff; color:#fff; }
+.cotes button:hover { background-color:#0056b3; }
+.pari, .parieur { margin-top:15px; }
+.pari input, .parieur input { padding:4px 6px; width:150px; }
+.selected-matches { margin-top:20px; padding-top:10px; border-top:2px solid #333; }
+.selected-matches ul { list-style:none; padding-left:0; }
+
+</style>
+</head>
+<body>
+
+    <header class="header-fixe">
+        <div class="logo">
+            <img src="logo.png" alt="Logo AnnouJweParyaj">
+        </div>
+    
+        <!-- MENU DE BOUTONS -->
+        <nav class="menu-header">
+            <button onclick="window.location.href='championnat-national.html'">Championnat National</button>
+            <button onclick="window.location.href='championnat-volleyball.html'">Championnat Basketball </button>
+            <button onclick="window.location.href='championnat-Basketball.html'">Championnat </button>
+            <button onclick="window.location.href='index.html'">Qps</button>
+            <button onclick="window.location.href='funbet.html'">FunBet</button>
+            <button onclick="window.location.href='aide.html'">Aide</button>
+        </nav>
+    
+        <div class="marquee">
+            <p>⚽ Bienvini sou site web AnnouJweParyaj – Parye anba ekip ou ak tout sekirite ! ⚽ Epi Toujou konsilte paj Aide la avanw parye</p>
+        </div>
+    </header>
+<div class="ticket-combine">
+    <h2>FunBet – QPS 2025</h2>
+
+  
+
+    <!-- FunBets -->
+    <div class="funbet" data-match="FunBet 1">
+        <span>FunBet 1 : Toutes les équipes totaliseront au moins 60 points lors de la première journée – Cote 3.5</span>
+        <div class="cotes">
+            <button class="select-team" data-team="Oui" data-cote="3.5">Parier</button>
+        </div>
+    </div>
+    <div class="funbet" data-match="FunBet 2">
+        <span>FunBet 2 : CTLO bat Toussaint de au moins 35 points d'écart – Cote 4</span>
+        <div class="cotes">
+            <button class="select-team" data-team="Oui" data-cote="4">Parier</button>
+        </div>
+    </div>
+    <div class="funbet" data-match="FunBet 3">
+        <span>FunBet 3 : LCMO marquera plus de 50 points cumulés – Cote 3.2</span>
+        <div class="cotes">
+            <button class="select-team" data-team="Oui" data-cote="3.2">Parier</button>
+        </div>
+    </div>
+
+    <!-- Autres FunBets inventés -->
+    <div class="funbet" data-match="FunBet 4">
+        <span>FunBet 4 : Vedette gagne avec au moins 20 points d’écart – Cote 4.5</span>
+        <div class="cotes"><button class="select-team" data-team="Oui" data-cote="4.5">Parier</button></div>
+    </div>
+    <div class="funbet" data-match="FunBet 5">
+        <span>FunBet 5 : UVC cumulera moins de 40 points – Cote 3.8</span>
+        <div class="cotes"><button class="select-team" data-team="Oui" data-cote="3.8">Parier</button></div>
+    </div>
+    <div class="funbet" data-match="FunBet 6">
+        <span>FunBet 6 : OVC marque au moins 25 points en première moitié – Cote 3.6</span>
+        <div class="cotes"><button class="select-team" data-team="Oui" data-cote="3.6">Parier</button></div>
+    </div>
+    <div class="funbet" data-match="FunBet 7">
+        <span>FunBet 7 : BVC ne dépasse pas 50 points cumulés – Cote 3.9</span>
+        <div class="cotes"><button class="select-team" data-team="Oui" data-cote="3.9">Parier</button></div>
+    </div>
+    <div class="funbet" data-match="FunBet 8">
+        <span>FunBet 8 : Vedette marque plus de 30 points en seconde moitié – Cote 4.1</span>
+        <div class="cotes"><button class="select-team" data-team="Oui" data-cote="4.1">Parier</button></div>
+    </div>
+    <div class="funbet" data-match="FunBet 9">
+        <span>FunBet 9 : CTLO + LCMO totaliseront plus de 100 points – Cote 3.7</span>
+        <div class="cotes"><button class="select-team" data-team="Oui" data-cote="3.7">Parier</button></div>
+    </div>
+    <div class="funbet" data-match="FunBet 10">
+        <span>FunBet 10 : Toussaint bat UVC – Cote 4.0</span>
+        <div class="cotes"><button class="select-team" data-team="Oui" data-cote="4.0">Parier</button></div>
+    </div>
+    <div class="funbet" data-match="FunBet 11">
+        <span>FunBet 11 : OVC + Vedette > 70 points cumulés – Cote 3.9</span>
+        <div class="cotes"><button class="select-team" data-team="Oui" data-cote="3.9">Parier</button></div>
+    </div>
+    <div class="funbet" data-match="FunBet 12">
+        <span>FunBet 12 : BVC ne gagne pas – Cote 3.5</span>
+        <div class="cotes"><button class="select-team" data-team="Oui" data-cote="3.5">Parier</button></div>
+    </div>
+    <div class="funbet" data-match="FunBet 13">
+        <span>FunBet 13 : Vedette gagne toutes les périodes – Cote 4.2</span>
+        <div class="cotes"><button class="select-team" data-team="Oui" data-cote="4.2">Parier</button></div>
+    </div>
+
+    <!-- Montant à parier -->
+    <div class="pari">
+        <label for="montant">Montant à parier (50 – 10 000 GDS) :</label>
+        <input type="number" id="montant" min="50" max="10000" value="50">
+    </div>
+
+    <!-- Matchs sélectionnés -->
+      <!-- Nom du parieur -->
+      <div class="parieur">
+        <label for="nom-parieur">Nom du parieur :</label>
+        <input type="text" id="nom-parieur" placeholder="Entrez votre nom">
+    </div>
+    <div class="selected-matches">
+        <h3>FunBet sélectionnés :</h3>
+        <ul id="matches-list"></ul>
+        <p>Cote totale : <span id="total-cote">1</span></p>
+        <p>Montant : <span id="montant-affiche">50</span> GDS</p>
+        <p>Gain potentiel : <span id="gain-potentiel">50</span> GDS</p>
+        <button id="send-whatsapp">Envoyer sur WhatsApp</button>
+    </div>
+
+</div>
+
+<script>
+let selectedMatches = [];
+
+document.querySelectorAll('.select-team').forEach(button => {
+    button.addEventListener('click', function() {
+        const matchDiv = this.closest('.funbet');
+        const matchName = matchDiv.dataset.match;
+        const team = this.dataset.team;
+        const cote = parseFloat(this.dataset.cote);
+
+        const exists = selectedMatches.find(m => m.match === matchName);
+        if (!exists) {
+            selectedMatches.push({match: matchName, team: team, cote: cote});
+        } else {
+            exists.team = team;
+            exists.cote = cote;
+        }
+
+        updateTicket();
+    });
+});
+
+function updateTicket() {
+    const list = document.getElementById('matches-list');
+    list.innerHTML = '';
+    let totalCote = 1;
+
+    selectedMatches.forEach(match => {
+        const li = document.createElement('li');
+        li.textContent = `${match.match} – Choisi: ${match.team} – Cote: ${match.cote}`;
+        list.appendChild(li);
+        totalCote *= match.cote;
+    });
+
+    document.getElementById('total-cote').textContent = totalCote.toFixed(2);
+
+    const montant = parseFloat(document.getElementById('montant').value);
+    document.getElementById('montant-affiche').textContent = montant;
+
+    const gain = montant * totalCote;
+    document.getElementById('gain-potentiel').textContent = gain.toFixed(2);
+}
+
+document.getElementById('montant').addEventListener('input', function() {
+    let val = parseInt(this.value);
+    if(val < 50) this.value = 50;
+    if(val > 10000) this.value = 10000;
+    updateTicket();
+});
+
+document.getElementById('send-whatsapp').addEventListener('click', function() {
+    const nomParieur = document.getElementById('nom-parieur').value.trim();
+    if(nomParieur === "") {
+        alert('Veuillez entrer votre nom avant d’envoyer le ticket !');
+        return;
+    }
+
+    if(selectedMatches.length === 0){
+        alert('Sélectionnez au moins un FunBet !');
+        return;
+    }
+
+    const montant = document.getElementById('montant').value;
+    let message = `FunBet QPS 2025 de ${nomParieur} (Montant: ${montant} GDS) :\n`;
+    
+    selectedMatches.forEach(match => {
+        message += `${match.match} – Choisi: ${match.team} – Cote: ${match.cote}\n`;
+    });
+
+    message += `Cote totale : ${document.getElementById('total-cote').textContent}\n`;
+    message += `Gain potentiel : ${document.getElementById('gain-potentiel').textContent} GDS`;
+
+    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+});
+</script>

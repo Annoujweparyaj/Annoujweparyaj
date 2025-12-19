@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Championnat Volleyball – AnnouJweParyaj</title>
+<header class="header-fixe">
+    <div class="logo">
+        <img src="logo.png" alt="Logo AnnouJweParyaj">
+    </div>
+
+    <!-- MENU DE BOUTONS -->
+    <nav class="menu-header">
+        <button onclick="window.location.href='championnat-national.html'">Championnat National</button>
+     
+        <button onclick="window.location.href='championnat-Basketball.html'">Championnat Volleyball</button>
+        <button onclick="window.location.href='index.html'">Qps</button>
+        <button onclick="window.location.href='funbet.html'">FunBet</button>
+        <button onclick="window.location.href='aide.html'">Aide</button>
+    </nav>
+
+    <div class="marquee">
+        <p>⚽ Bienvini sou site web AnnouJweParyaj – Parye anba ekip ou ak tout sekirite ! ⚽ Epi Toujou konsilte paj Aide la avanw parye</p>
+    </div>
+</header>
+
+<style>
+body { font-family: Arial, sans-serif; padding: 20px; }
+h1 { color: #007bff; }
+ul { list-style-type: square; }
+.notice { color: red; font-weight: bold; }
+.header-fixe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(51, 118, 83);
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 16px;
+    z-index: 9999;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Logo réduit */
+.header-fixe img {
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+/* Menu de boutons */
+.menu-header {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap; /* s’adapte aux petits écrans */
+    margin-bottom: 5px;
+}
+.menu-header button {
+    padding: 5px 10px;
+    background-color: #e8ebee;
+    border: none;
+    border-radius: 5px;
+    color: rgb(27, 7, 7);
+    cursor: pointer;
+    font-size: 14px;
+}
+.menu-header button:hover {
+    background-color: #0056b3;
+}
+
+/* Message défilant */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: defile 15s linear infinite;
+    font-size: 14px;
+    font-weight: bold;
+}
+@keyframes defile {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+body {
+    padding-top: 140px; /* ajuste selon le header + menu + message défilant */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+</style>
+</head>
+<body>
+
+    <h1>Championnat Basketball – Ouanaminthe</h1>
+    
+    <p class="notice">Championnat pas encore commencé (2026).</p>
+    
+    </body>
+    
+</html>
